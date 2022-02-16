@@ -1,16 +1,30 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 5000;
 const mongoose = require("mongoose");
+const cors = require('cors');
+app.use(express.json());
+
+
+app.use(cors());
+app.get('/products/:id', function (req, res, next) {
+    res.json({msg: 'This is CORS-enabled for all origins!'})
+  })
+  
+  app.listen(5000, function () {
+    console.log('CORS-enabled web server listening on port 5000')
+  })
 
 app.use(express.urlencoded({
     extended : true,
 }));
-app.use(express.json());
+
 
 const empresaRouter = require("./route/empresaRouter");
 app.use("/", empresaRouter);
+
+
 
 
 const DB_USER = process.env.DB_USER;
@@ -21,7 +35,7 @@ mongoose.connect(
 )
 .then(() => {
     console.log("Conectado ao banco");
-    app.listen(port);
+    
    
   })
   .catch((error) => console.log(error));
