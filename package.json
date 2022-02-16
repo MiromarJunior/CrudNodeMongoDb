@@ -1,0 +1,19 @@
+{
+  "name": "apinodemongo",
+  "version": "1.0.0",
+  "description": "Crud com Node React e MongoDb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiromarJunior/CrudNodeMongoDb.git"
+  },
+  "author": "Miromar Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiromarJunior/CrudNodeMongoDb/issues"
+  },
+  "homepage": "https://github.com/MiromarJunior/CrudNodeMongoDb#readme"
+}
